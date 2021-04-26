@@ -1,7 +1,7 @@
 # timer_app
 
 ## Final Release
-https://david-first-webapp-on-heroku.herokuapp.com/
+https://david-timer-app.herokuapp.com/
 
 ## Structure
 ```
