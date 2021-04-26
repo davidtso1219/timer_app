@@ -26,14 +26,14 @@ timerForm.addEventListener("submit", (e) => {
     e.preventDefault()
 
     const timeDisplay = document.getElementById("time-display")
-    let timeObject = {}
+    let timeObjectFromInputFields = {}
 
     timeUnits.forEach( (unit) => {
         const input = document.querySelector(`[name='${unit}']`)
-        timeObject[unit] = input.value
+        timeObjectFromInputFields[unit] = input.value
     })
 
-    showTime(timeObject)
+    showTime(timeObjectFromInputFields)
 
     timeUnits.forEach((unit) => {
         const input = document.querySelector(`[name='${unit}']`)
@@ -44,36 +44,33 @@ timerForm.addEventListener("submit", (e) => {
 startBtn.addEventListener("click", (e) => {
     
     let newSetTime = document.getElementById("time-display").textContent.split(":")
-    let timeObject = {};
+    let timeObjectFromDiv = {};
 
     for (let i = 0; i < newSetTime.length; i++) {
-        timeObject[timeUnits[i]] = newSetTime[i]
+        timeObjectFromDiv[timeUnits[i]] = newSetTime[i]
     }
 
     var countdown = setInterval(() => {
-        if (timeObject.second == 0){
-
-            if (timeObject.minute == 0){
-
-                if (timeObject.hour == 0){
+        if (timeObjectFromDiv.second == 0){
+            if (timeObjectFromDiv.minute == 0){
+                if (timeObjectFromDiv.hour == 0){
                     alert("Time's UP!")
+                    clearInterval(countdown)
                 }
                 else{
-                    timeObject.hour = String(timeObject.hour - 1)
-                    timeObject.minute = String(59)
+                    timeObjectFromDiv.hour = String(timeObjectFromDiv.hour - 1)
+                    timeObjectFromDiv.minute = String(59)
                 }
-
             }
             else {
-                timeObject.minute = String(timeObject.minute - 1)
-                timeObject.second = String(59)
+                timeObjectFromDiv.minute = String(timeObjectFromDiv.minute - 1)
+                timeObjectFromDiv.second = String(59)
             }
-
         }
         else {
-            timeObject.second = String(timeObject.second - 1)
+            timeObjectFromDiv.second = String(timeObjectFromDiv.second - 1)
         }
-        showTime(timeObject)
+        showTime(timeObjectFromDiv)
     }, 1000)
 
     pauseBtn.addEventListener("click", () => {
