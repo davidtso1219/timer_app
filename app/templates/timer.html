@@ -7,6 +7,16 @@
     <title>Timer</title>
 </head>
 <body>
-    <h1>Welcome {{name}}!</h1>
+    <h1>Welcome {{ name }}!</h1>
+    <form id="timerForm">
+        <input type="number" name="hour" placeholder="00"> :
+        <input type="number" name="minute" placeholder="00"> :
+        <input type="number" name="second" placeholder="00"> :
+        <button type="submit" id="resetBtn">Set</button>
+    </form>
+    <div id="time-display"></div>
+    <button id="startBtn">Start</button>
+    <button id="stopBtn">Stop</button>Pause</button>
+    <script src="../static/timer.js"></script>
 </body>
 </html>

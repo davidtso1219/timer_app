@@ -4,6 +4,7 @@
     font-family: "Times New Roman";
     display: flex;
     justify-content: center;
+    margin: auto;
 }
 
 .center-container { 
