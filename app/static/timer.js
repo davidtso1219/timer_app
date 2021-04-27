@@ -60,6 +60,7 @@ startBtn.addEventListener("click", (e) => {
                 else{
                     timeObjectFromDiv.hour = String(timeObjectFromDiv.hour - 1)
                     timeObjectFromDiv.minute = String(59)
+                    timeObjectFromDiv.second = String(59)
                 }
             }
             else {
