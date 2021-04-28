@@ -5,18 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
+    <link rel="stylesheet" type="text/css" href="../static/timer.css"/>
 </head>
 <body>
-    <h1>Welcome {{ name }}!</h1>
-    <form id="timerForm">
-        <input type="number" name="hour" placeholder="00" max="23"> :
-        <input type="number" name="minute" placeholder="00" max="59"> :
-        <input type="number" name="second" placeholder="00" max="59">
-        <button type="submit" id="resetBtn">Set</button>
-    </form>
-    <div id="time-display">00:00:00</div>
-    <button id="startBtn">Start</button>
-    <button id="pauseBtn">Pause</button>
+    <div class="center-container">
+        <h1>Welcome {{ name }}!</h1>
+        <h3>Please enter the timer below.</h3>
+        <form id="timerForm">
+            <input type="number" name="hour" placeholder="00" max="23"> :
+            <input type="number" name="minute" placeholder="00" max="59"> :
+            <input type="number" name="second" placeholder="00" max="59">
+            <button type="submit" id="resetBtn">Set</button>
+        </form>
+        <div id="time-display">00:00:00</div>
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+    </div>
     <script src="../static/timer.js"></script>
 </body>
 </html>

@@ -5,7 +5,6 @@ html {
 body {
     height: 100%;
     background-color: rgb(49, 243, 107);
-    justify-content: center;
 }
 
 .center-container { 
@@ -16,7 +15,7 @@ body {
     text-align: center;
     font-family: "Arial";
     color: rgb(0, 60, 255);
-    position: absolute;
+    position: relative;
     top: 25%;
     left: 25%;
 }
