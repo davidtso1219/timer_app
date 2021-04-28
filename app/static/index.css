@@ -1,22 +1,49 @@
-/* body {
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
     background-color: rgb(49, 243, 107);
-    text-align: center;
-    font-family: "Times New Roman";
-    display: flex;
     justify-content: center;
-    margin: auto;
 }
 
 .center-container { 
     background-color: rgb(117, 238, 153);
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    border-radius: 10%;
+    height: 50%;
+    width: 50%;    
+    border-radius: 5%;
+    text-align: center;
+    font-family: "Arial";
+    color: rgb(0, 60, 255);
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+.center-container h1 {
+    position: relative;
+    top: 90px;
+}
+
+.center-container h3 {
+    position: relative;
+    top: 80px;
 }
 
 .center-container input {
-    background-color: rgb(224, 242, 243);
-    text-align: center;
+    margin-top: 100px;
+    padding: 10px;
+	outline: none;
+	border-radius: 40px;
+	width: 150px;
+	font-size: 20px;
+	text-align: center;
+	transition: width 0.7s;
 }
- */
+
+.center-container input:hover {
+    width: 230px;
+	border-color: blue;
+}
+
