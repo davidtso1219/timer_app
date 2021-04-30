@@ -1,4 +1,5 @@
 const timerForm = document.getElementById("timerForm")
+const resetBtn = document.getElementById("resetBtn")
 const startBtn = document.getElementById("startBtn")
 const pauseBtn = document.getElementById("pauseBtn")
 const inputFields = document.querySelectorAll('input')
@@ -6,7 +7,14 @@ const timeUnits = ['hour', 'minute', 'second']
 
 inputFields.forEach((field) => {
     field.addEventListener("input", (e) => {
-        e.preventDefault()
+        let length = field.value.length
+        if (field.value < 10 && length == 1){
+            field.value = '0' + field.value
+        }
+        else if (length > 2){
+            console.log(field.value)
+            field.value = field.value.slice(length - 2, length)
+        }
         if (field.value > field.max){
             field.value = field.max
         }
@@ -14,7 +22,7 @@ inputFields.forEach((field) => {
             field.value = 0
         }
     })
-
+    console.log(field.value)
     field.addEventListener("onkeyup", (e) => {
         e.preventDefault()
         field.value++
@@ -75,6 +83,10 @@ startBtn.addEventListener("click", (e) => {
     }, 1000)
 
     pauseBtn.addEventListener("click", () => {
+        clearInterval(countdown)
+    })
+
+    timerForm.addEventListener("submit", () => {
         clearInterval(countdown)
     })
 })

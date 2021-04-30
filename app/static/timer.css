@@ -20,8 +20,77 @@ body {
     font-family: "Arial";
 }
 
-.center-container h3 {
-    position: relative;
-    top: -15px;
+.center-container .title {
+    font-size: 60px;
+    padding-top: 50px;
 }
 
+.center-container .subtitle {
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('put_the_location_to_your_font.ttf or .otf');
+}
+
+input {
+    width: 10%;
+    font-size: 50px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(223, 255, 232);
+}
+
+#time-display {
+    font-family: 'Orbitron';
+    font-size: 130px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.center-container .colon {
+    font-size: 50px;
+}
+
+button {
+    background: #699CFC;
+	color: white;
+	border-color: transparent;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 100px;
+    font-size: 20px;
+    border-radius: 25px;
+}
+
+button:hover {
+    background: white;
+    color:rgb(0, 60, 255);
+    transform: translateY(-4px);
+    transition: 0.25s;
+}
+
+button:active {
+    transform: translateY(4px)
+}
+
+#resetBtn {
+    position: absolute;
+    left: 73%;
+    top: 35%;
+    visibility: hidden;
+}
+
+#startBtn {
+    position: relative;
+    left: 0;
+}
+
+#pauseBtn {
+    position: relative;
+    left: 10px;
+}

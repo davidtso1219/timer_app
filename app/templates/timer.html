@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
     <link rel="stylesheet" type="text/css" href="../static/timer.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <div class="center-container">
-        <h1>Welcome {{ name }}!</h1>
-        <h3>Please enter the timer below.</h3>
+        <div class="title">Welcome {{ name }}!</h1>
+        <div class="subtitle">Please enter the time below.</div>
         <form id="timerForm">
-            <input type="number" name="hour" placeholder="00" max="23"> :
-            <input type="number" name="minute" placeholder="00" max="59"> :
+            <input type="number" name="hour" placeholder="00" max="23"><span class="colon"> :</span>
+            <input type="number" name="minute" placeholder="00" max="59"><span class="colon"> :</span>
             <input type="number" name="second" placeholder="00" max="59">
             <button type="submit" id="resetBtn">Set</button>
         </form>
